@@ -7,12 +7,29 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
-    "typer (>=0.24.1,<0.25.0)"
-]
 
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = ">=0.12.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+ruff = "^0.6.5"
+pytest = "^8.0"
+
+[tool.poetry.scripts]
+plaster = "plaster.main:app"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
