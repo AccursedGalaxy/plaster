@@ -35,6 +35,7 @@ def main(
     """CLI wallpaper management."""
 
 
+# Command Registry
 app.command()(echo)
 
 
