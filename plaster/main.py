@@ -1,8 +1,11 @@
+from importlib.metadata import version
 from typing import Optional
 
 import typer
 
 from plaster.commands.echo import echo
+
+__version__ = version("plaster")
 
 app = typer.Typer(
     name="plaster",
@@ -14,7 +17,7 @@ app = typer.Typer(
 
 def version_callback(value: bool) -> None:
     if value:
-        typer.echo("plaster 0.1.0")
+        typer.echo(f"plaster {__version__}")
         raise typer.Exit()
 
 
