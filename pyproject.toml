@@ -15,7 +15,7 @@ typer = ">=0.12.5"
 [tool.poetry.group.dev.dependencies]
 black = "^26.3.1"
 ruff = "^0.6.5"
-pytest = "^8.0"
+pytest = "^9.0"
 
 [tool.poetry.scripts]
 plaster = "plaster.main:app"
